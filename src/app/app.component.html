@@ -1,17 +1,25 @@
-<div class="">
-  <ng-select [items]="countryList" 
-  bindLabel="name" 
-  bindValue="id" 
-   (change)="loadState()">
+<div  class="row col-md-6" style="margin-top:100px;">
+  <div class=" col-md-6">
+    <ng-select [items]="countryList" placeholder="Country"
+    bindLabel="name" 
+    bindValue="id" 
+     (change)="loadState()">
+    </ng-select>
+  </div>
+  <div class=" col-6">
+    <ng-select [items]="stateList" placeholder="State"
+    bindLabel="name" 
+    bindValue="id" 
+     (change)="selectState($event)">
   </ng-select>
-  <ng-select [items]="stateList" 
-  bindLabel="name" 
-  bindValue="id" 
-   (change)="selectState($event)">
-</ng-select>
+  </div>
+
 </div>
-<ng-select [items]="districtList" 
-bindLabel="name" 
-bindValue="id" 
- >
-</ng-select>
+<div  class="row col-md-6" style="margin-top:100px;">
+<div class=" col-6">
+  <ng-select [items]="districtList" placeholder="city"
+  bindLabel="name" 
+  bindValue="id" >
+  </ng-select>
+  </div>
+</div>
